@@ -1,7 +1,7 @@
 # **Html Helper**
 
 This a small Script which creates Necessary files for front-end.
-If there is a price fall it will notify you through mail 
+
 
 # Files Create:
 - Creates Index.html with pre-Html Tags defined for any project
