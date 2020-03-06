@@ -13,7 +13,7 @@ This a small Script which creates Necessary files for front-end.
 * Python 3+
 
 # How-To:
-- install Python 3  and For Windows users -add to path including pip
+- install Python 3  and For Windows users add python to Envirnoment path
 - use `python try.py` in command prompt 
 - Either clone this repo or copy paste or download
 - replace all the inside text of ''  with username for the specific valid os
