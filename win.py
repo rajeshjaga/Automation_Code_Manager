@@ -1,4 +1,5 @@
 import os
+import try1
 
 def trying(cur_path):
     def_path="c:/users/hp/documents/github/html"
@@ -8,7 +9,7 @@ def trying(cur_path):
         print("the folder exists")
     except OSError as Error:
         print("This is new project ")
-        create(mypath,cur_path)
+        print(create(mypath,cur_path))
 
 def create(mypath,cur_path):
     os.mkdir(mypath)
@@ -40,14 +41,28 @@ def create(mypath,cur_path):
 </html>'''.format(cur_path))
     f.write(html)
     f.close()
-
+   
+    sceip=os.path.join(mypath,"script")
+    os.mkdir(sceip)
+    os.chdir(sceip)
+    f2=open("app.js","w+")
     if(os.path.exists(mypath)):
         print("done")
     else:
         print("requests rejected")
 
+# optionlios=[2,3]
+# option=int(input("\n 1. Create new HTML project \n 2.Flutter \n 3.Python \n 4.Exit \n"))
+def opion(option):
+    if(option==1):
+        cre_path=input("Enter the project name :")
+        print("Checking if the project exists...")
+        trying(cre_path)
+    else:
+        do=input("Do you want to exit ? :(Y/N)")
+        if(do=="y","Y"):
+           exit()
+        else:
+            try1.op()
 
- 
-cre_path=input("Enter the project name ")
-print("Checking if the project exists :")
-trying(cre_path)
+
