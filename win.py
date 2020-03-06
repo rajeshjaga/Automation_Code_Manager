@@ -1,5 +1,5 @@
 import os
-import try1
+
 
 def trying(cur_path):
     def_path="c:/users/hp/documents/github/html"
@@ -53,8 +53,8 @@ def create(mypath,cur_path):
 
 # optionlios=[2,3]
 # option=int(input("\n 1. Create new HTML project \n 2.Flutter \n 3.Python \n 4.Exit \n"))
-def opion(option):
-    if(option==1):
+def opion(optin):
+    if(optin==1):
         cre_path=input("Enter the project name :")
         print("Checking if the project exists...")
         trying(cre_path)
@@ -63,6 +63,6 @@ def opion(option):
         if(do=="y","Y"):
            exit()
         else:
-            try1.op()
+            trying()
 
 

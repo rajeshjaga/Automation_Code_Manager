@@ -14,5 +14,6 @@ def osd(option,path):
     elif(path=="Darwin"):
         m.trying(option)
     elif(path=="Linux"):
-        f.opion(option)
+        m.lint(option)
     
+op()

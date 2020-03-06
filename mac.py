@@ -26,7 +26,7 @@ def create(mypath,cur_path):
     padding: 0;
     box-sizing: border-box;
 }''')
-f2.write(css)
+    f2.write(css)
     f2.close
     html=('''<!DOCTYPE html>
 <html lang="en">
