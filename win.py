@@ -63,6 +63,6 @@ def opion(optin):
         if(do=="y","Y"):
            exit()
         else:
-            trying()
+            trying(cre_path)
 
 
