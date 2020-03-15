@@ -50,6 +50,7 @@ def create(mypath,cur_path):
     f2=open("app.js","w+")
     if(os.path.exists(mypath)):
         print("done")
+        print(f'{mypath}')
     else:
         print("requests rejected")
 
