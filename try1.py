@@ -5,7 +5,7 @@ import mac as m
 
 def op():
     path=platform.system()
-    option=int(input("\n 1. Create new HTML project \n 2.Flutter \n 3.Python \n 4.Exit \n"))
+    option=int(input("\n 1. Create new HTML project(select 9 for git initialization) \n 2.Delete a project \n 3.Open a Project \n 4.Archive \n"))
     osd(option,path)
 
 def osd(option,path):

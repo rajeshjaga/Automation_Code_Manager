@@ -1,5 +1,6 @@
 import os
-
+import text as t
+import main as main
 
 def trying(cur_path):
     def_path="c:/users/hp/documents/github/html"
@@ -7,6 +8,7 @@ def trying(cur_path):
     try:
         os.chdir(mypath)
         print("the folder exists")
+        ch("",mypath)
     except OSError as Error:
         print("This is new project ")
         print(create(mypath,cur_path))
@@ -50,22 +52,77 @@ def create(mypath,cur_path):
     f2=open("app.js","w+")
     if(os.path.exists(mypath)):
         print("done")
+        os.system(f"cd {mypath}")
         print(f'{mypath}')
     else:
         print("requests rejected")
+    
+    
+        
 
 # optionlios=[2,3]
 # option=int(input("\n 1. Create new HTML project \n 2.Flutter \n 3.Python \n 4.Exit \n"))
 def opion(optin):
-    if(optin==1):
+    if(optin==1,9):
         cre_path=input("Enter the project name :")
         print("Checking if the project exists...")
         trying(cre_path)
+        if(optin==9):
+            deli(cre_path)
+    elif(optin==2):
+        cdir=input("Mention the project name to delete")
+        def_path="c:/users/hp/documents/github/html"
+        try:
+            mypath=os.path.join(def_path,cdir)
+        except OSError as Error:
+            print(f'the project mention {cdir} doesnt exist')
+            t.main(optin)
+    elif(optin==3):
+        cdir=input("Mention the project name (to say i dont recommend this option)")
+        def_path="c:/users/hp/documents/github/html"
+        try:
+            mypath=(def_path)
+            c=os.system(f'cd {mypath}')
+            os.chdir(mypath)
+            print(os.getcwd())         
+            os.system(f'rd {cdir} /s')
+        except OSError as Error:
+            print(f'the project mention {cdir} doesnt exist')
+            t.main(optin) 
+    elif(optin==4):
+        cdir=input("Mention the project name to archive")
+        def_path="c:/users/hp/documents/github/html"
+        try:
+            main.di()
+        except OSError as Error:
+            print(f'the project mention {cdir} doesnt exist')
+            t.main(optin) 
+        
     else:
         do=input("Do you want to exit ? :(Y/N)")
         if(do=="y","Y"):
            exit()
-        else:
+        elif (do=='n','N'):
             trying(cre_path)
 
 
+
+def ch(flag,path):
+    t.check_1()
+    if(flag==1):
+        os.chdir(path)
+        os.system('code .')
+    else:
+        exit()
+    
+
+def deli(myo):
+    def_path="c:/users/hp/documents/github/html"
+    mypath=os.path.join(def_path,myo)
+    os.chdir(mypath)
+    os.system('git init')
+    os.system('git add .')
+    os.system('git commit -m "initial commit"')
+    print('git init done')
+    
+    
