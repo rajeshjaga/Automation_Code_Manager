@@ -9,7 +9,7 @@ def trying(cur_path):
     try:
         os.chdir(mypath)
         print("the folder exists")
-        ch("", mypath)
+        ch(mypath)
     except OSError as Error:
         print("This is new project ")
         print(create(mypath, cur_path))
@@ -63,21 +63,22 @@ def create(mypath, cur_path):
 
 
 def opion(optin):
-    if (optin == 1, 9):
+    if optin == 1 or optin == 9:
         cre_path = input("Enter the project name :")
         print("Checking if the project exists...")
         trying(cre_path)
         if optin == 9:
             deli(cre_path)
-    elif optin == 2:
+    elif optin == 3:
         cdir = input("Mention the project name to delete")
         def_path = "c:/users/hp/documents/github/html"
         try:
             mypath = os.path.join(def_path, cdir)
+            ch(mypath)
         except OSError as Error:
             print(f"the project mention {cdir} doesnt exist")
             t.main(optin)
-    elif optin == 3:
+    elif optin == 2:
         cdir = input("Mention the project name (to say i dont recommend this option)")
         def_path = "c:/users/hp/documents/github/html"
         try:
@@ -105,13 +106,10 @@ def opion(optin):
         elif (do == "n", "N"):
             trying(cre_path)
 
-def ch(flag, path):
-    t.check_1()
-    if flag == 1:
-        os.chdir(path)
-        os.system("code .")
-    else:
-        exit()
+
+def ch(path):
+    os.chdir(path)
+    os.system("code .")
 
 
 def deli(myo):
@@ -123,3 +121,6 @@ def deli(myo):
     os.system('git commit -m "initial commit"')
     print("git init done")
 
+
+# input_1 = int(input("enter the option"))
+# opion(input_1)
