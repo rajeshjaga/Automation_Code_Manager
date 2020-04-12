@@ -57,6 +57,7 @@ def create(mypath, cur_path):
     if os.path.exists(mypath):
         print("done")
         os.system(f"cd {mypath}")
+        os.system("code .")
         print(f"{mypath}")
     else:
         print("requests rejected")
