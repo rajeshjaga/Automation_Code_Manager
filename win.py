@@ -56,7 +56,7 @@ def create(mypath, cur_path):
     f2 = open("app.js", "w+")
     if os.path.exists(mypath):
         print("done")
-        os.system(f"cd {mypath}")
+        os.chdir(mypath)
         os.system("code .")
         print(f"{mypath}")
     else:
