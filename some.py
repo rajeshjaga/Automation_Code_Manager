@@ -19,10 +19,10 @@ class flutter:
             projectsPath=os.path.join(self.path,self.name)
             os.chdir(projectsPath)
             print(os.getcwd())
-            print('this directory exits do you want to open')
+            print('This directory exits do you want to open')
             if(tan.main3()==True):
                 openProjects(self,projectsPath,self.name)
-                print('opening in vs code')
+                print('Opening in vs code')
         except OSError as error:
             print(error)
             print('Do you want to create the folder and create the project')
@@ -87,20 +87,20 @@ async def callingForActualcommand(self,path,nameFolder):
 
 def git(folderName):
     def_path = "c:/users/hp/documents/github/Flutter"
-    mypath = os.path.join(def_path, folderName,folderName)
-    os.chdir(mypath)
+    myPath = os.path.join(def_path, folderName,folderName)
+    os.chdir(myPath)
     os.system("git init")
     os.system("git add .")
     os.system('git commit -m "initial commit"')
     print("git init done")
 
 
-def mainOp(self,option):
+def mainOp(option):
+
     projectName=input('Enter the name of flutter project you  want to create\n')
+    global objectOne
     objectOne=flutter(mainPath,projectName)
-    self.path=objectOne.path
-    self.name=objectOne.name
-    archiveFolder='''C:/Users/hp/Documents/github/archive/Flutter'''
+        
     if option == 1 or option == 9:
         objectOne.creating_projects()
         if option==9:
@@ -118,7 +118,7 @@ def mainOp(self,option):
             os.system(f"rd {cdir} /s")
         except OSError as Error:
             print(Error)
-            print(f"the project mention {cdir} doesnt exist")
+            print(f"the project mention {cdir} doesn't exist")
             pass
             
                 
