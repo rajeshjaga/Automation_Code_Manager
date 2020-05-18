@@ -5,12 +5,12 @@ This a small Script which manages both flutter and front-end projects
 
 # Files Create:
   # For Front-end:
-    - Creates Index.html with pre-Html Tags defined for any project
-    - Style folder with style.css(With padding and margins removed)
-    - Assets folder added
+  - Creates Index.html with pre-Html Tags defined for any project
+  - Style folder with style.css(With padding and margins removed)
+  - Assets folder added
   # For flutter :
-    -all the files when you Enter the command `flutter create app_name`
-    -git init is added (optional)
+  -all the files when you Enter the command `flutter create app_name`
+  -git init is added (optional)
     
   
 
