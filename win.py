@@ -12,6 +12,7 @@ def trying(cur_path):
         ch(mypath)
     except OSError as Error:
         print("This is new project ")
+        print(Error)
         print(create(mypath, cur_path))
 
 
@@ -71,12 +72,15 @@ def opion(optin):
         if optin == 9:
             deli(cre_path)
     elif optin == 3:
-        cdir = input("Mention the project name to delete")
         def_path = "c:/users/hp/documents/github/html"
+        os.chdir(def_path)
+        os.system("dir")
+        cdir = input("Mention the project name to open")
         try:
             mypath = os.path.join(def_path, cdir)
             ch(mypath)
         except OSError as Error:
+            print(Error)
             print(f"the project mention {cdir} doesnt exist")
             t.main(optin)
     elif optin == 2:
@@ -84,11 +88,11 @@ def opion(optin):
         def_path = "c:/users/hp/documents/github/html"
         try:
             mypath = def_path
-            c = os.system(f"cd {mypath}")
             os.chdir(mypath)
             print(os.getcwd())
             os.system(f"rd {cdir} /s")
         except OSError as Error:
+            print(Error)
             print(f"the project mention {cdir} doesnt exist")
             t.main(optin)
     elif optin == 4:
@@ -97,6 +101,7 @@ def opion(optin):
         try:
             main.di()
         except OSError as Error:
+            print(Error)
             print(f"the project mention {cdir} doesnt exist")
             t.main(optin)
 
@@ -109,6 +114,8 @@ def opion(optin):
 
 
 def ch(path):
+    # os.chdir(path)
+    # os.system(dir)
     os.chdir(path)
     os.system("code .")
 
