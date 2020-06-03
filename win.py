@@ -25,7 +25,7 @@ def create(mypath, cur_path):
     stylepath = os.path.join(mypath, "style")
     os.mkdir(stylepath)
     os.chdir(stylepath)
-    f2 = open("style.css", "w+")
+    f2 = open("style.scss", "w+")
     css = """*{
     margin:0;
     padding: 0;
@@ -81,10 +81,10 @@ def opion(optin):
             ch(mypath)
         except OSError as Error:
             print(Error)
-            print(f"the project mention {cdir} doesnt exist")
+            print(f"the project mention {cdir} doesn't exist")
             t.main(optin)
     elif optin == 2:
-        cdir = input("Mention the project name (to say i dont recommend this option)")
+        cdir = input("Mention the project name (to say i don'7t recommend this option)")
         def_path = "c:/users/hp/documents/github/html"
         try:
             mypath = def_path
@@ -93,7 +93,7 @@ def opion(optin):
             os.system(f"rd {cdir} /s")
         except OSError as Error:
             print(Error)
-            print(f"the project mention {cdir} doesnt exist")
+            print(f"the project mention {cdir} doesn't exist")
             t.main(optin)
     elif optin == 4:
         cdir = input("Mention the project name to archive")
